@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pCy-t5-q7s">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vehicle Swap-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CarsViewController" customModule="Cool_Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vehicle Swap" id="u8q-xy-axQ"/>
+                    <connections>
+                        <segue destination="gt2-WG-Lh9" kind="presentation" identifier="segueDetails" id="efM-RQ-lP6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108.695652173913" y="20.758928571428569"/>
+        </scene>
+        <!--Cars Detail Controller-->
+        <scene sceneID="qq1-NG-n4x">
+            <objects>
+                <viewController id="ODk-vG-zvN" customClass="CarsDetailController" customModule="Cool_Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPE-nJ-fpE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ETd-IZ-2A7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0s9-wq-8EQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vUM-rJ-dWD">
+                            <connections>
+                                <action selector="cancelTapped:" destination="ODk-vG-zvN" id="k0Z-Mq-raJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Select Car" id="1UB-VT-itF">
+                            <connections>
+                                <action selector="selectTapped:" destination="ODk-vG-zvN" id="vot-qm-6DN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="selectButton" destination="1UB-VT-itF" id="TEC-9u-Ced"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ET2-A0-wXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4097.1014492753629" y="20.758928571428569"/>
+        </scene>
+        <!--Cars Selection-->
+        <scene sceneID="ZyS-xL-ov8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hJG-mM-WkG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cars Selection" image="car.2" catalog="system" id="Nqb-XF-QNE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H51-lU-ksL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o2m-GB-eb8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3V-Rw-pWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="20.758928571428569"/>
+        </scene>
+        <!--Current Car-->
+        <scene sceneID="en2-oi-5NI">
+            <objects>
+                <viewController id="z8Z-2V-3ul" customClass="CarsDetailController" customModule="Cool_Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GtK-4k-5VN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zQr-7Q-con"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Current Car" image="car.fill" catalog="system" id="0Bl-2N-FWY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebU-iU-xt6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="918"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="g3Z-L0-2DH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pCy-t5-q7s" customClass="TabBarController" customModule="Cool_Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z7Y-KC-BzH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="z8Z-2V-3ul" kind="relationship" relationship="viewControllers" id="eiZ-pp-GfB"/>
+                        <segue destination="hJG-mM-WkG" kind="relationship" relationship="viewControllers" id="Wm6-hw-doL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xw3-68-umU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zmA-Pa-NDm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gt2-WG-Lh9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PKA-kD-1C8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="lightBlue"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ODk-vG-zvN" kind="relationship" relationship="rootViewController" id="xgP-1y-dnb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTK-ss-hIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3186.9565217391305" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car.2" catalog="system" width="128" height="72"/>
+        <image name="car.fill" catalog="system" width="128" height="93"/>
+        <namedColor name="lightBlue">
+            <color red="0.7839999794960022" green="0.88200002908706665" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
